@@ -46,17 +46,6 @@ h1 {
     0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-h2 {
-  font-size: 1.6em;
-  color: #ffff00;
-  text-shadow:
-    1px 1px 3px #000,
-    0 0 8px #ff8800;
-  border-bottom: 2px solid #ffff00;
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
 p {
   font-size: 1.1em;
   line-height: 1.8;
@@ -103,8 +92,8 @@ textarea {
 
 input[type="text"]:focus,
 textarea:focus {
-  border-color: #ff8800;
-  background: linear-gradient(180deg, #fffbe6 0%, #ffffff 100%);
+  border-color: #1a6fe8;
+  background: linear-gradient(180deg, #eaf4ff 0%, #ffffff 100%);
 }
 
 textarea {
@@ -194,6 +183,8 @@ br {
   margin: 8px 0;
 }
 
+/* XP windows */
+
 .xp-window {
   display: inline-block;
   width: 90%;
@@ -257,30 +248,40 @@ br {
 }
 
 .xp-content {
-  background: rgba(220, 235, 255, 0.88);
+  background: rgba(220, 235, 255, 0.92);
   padding: 16px 20px;
-  color: #000033;
   text-shadow: none;
-}
-
-.xp-content h1,
-.xp-content h2 {
-  text-shadow: none;
-  color: #00008b;
 }
 
 .xp-content p,
-.xp-content label,
 .xp-content li {
-  color: #000033;
+  color: #00235e;
   text-shadow: none;
+  font-size: 1em;
 }
 
 .xp-content ul li::before {
   color: #1a6fe8;
 }
 
+.xp-content h2 {
+  font-size: 1.4em;
+  color: #ffffff;
+  background: linear-gradient(180deg, #1e84d8, #0d3d99);
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 4px;
+  border: none;
+  text-shadow: 1px 1px 2px #00235e;
+  margin-bottom: 10px;
+}
+
+.xp-content label {
+  color: #00235e;
+  text-shadow: none;
+}
+
 .xp-content datalist option {
-  color: #000033;
+  color: #00235e;
   text-shadow: none;
 }
