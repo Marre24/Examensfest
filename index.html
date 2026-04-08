@@ -11,69 +11,104 @@
   </head>
 
   <body>
-    <marquee>woooooooooooooooaaaaaaaahhhhhhh</marquee>
+    <marquee>
+      BREAKING NEWS | DSVs fetaste Examensfest är här! | Minst en person kommer
+      | Ett flertal har antytt att de kommer | Vad väntar du på gå ned och anmäl
+      dig NUUUUUUU!!!!
+    </marquee>
+
     <h1>DSVs fetaste Examensfest</h1>
-    <p>
-      Dessa 3 svåra år är äntligen över och du tar snart examen vilket måstes
-      firas!!
-    </p>
-    <p>
-      Jag vill att du, JA JUST DU, ska komma på DSVs fetaste Examensfest&copy;
-    </p>
-
-    <p>DATUM: onsdag den 10 Juni</p>
-    <p>TID: från 15:00 &rarr; sent</p>
-    <p>Klädkod: kom fint klädda idk</p>
-
-    <h2>Lista på alla finfina personer som ska komma</h2>
-    <ul>
-      <li>Maximilian Ellnestam</li>
-    </ul>
-
-    <h2>Intresseanmälan</h2>
-
-    <br />
-
-    <label for="name">Namn:</label>
-    <input type="text" id="name" placeholder="Förnamn Efternamn" />
-
-    <br />
-
-    <label for="canCome">Kan du komma?</label>
-    <input type="checkbox" id="canCome" />
-
-    <br />
-
-    <label for="wantAlcohol">Vill du ha alkohol?</label>
-    <input type="checkbox" id="wantAlcohol" />
-
-    <br />
-
-    <label for="allergies">Allergier/saker jag bör känna till:</label>
-    <textarea
-      id="allergies"
-      rows="1"
-      cols="50"
-      placeholder="Lämna tomt om du inte har något att tillägga"
-    ></textarea>
-
-    <br />
-
-    <label for="tempB">Hur taggad är du på det här:</label><br />
-    <div class="range-wrap">
-      <input type="range" id="tempB" name="temp" list="values" />
-      <datalist id="values">
-        <option value="0" label="inte alls :("></option>
-        <option value="25" label="knappt"></option>
-        <option value="50" label="helt ok"></option>
-        <option value="75" label="det ska bli kul"></option>
-        <option value="100" label="WOOOOOO!!"></option>
-      </datalist>
+    <div class="xp-window">
+      <div class="xp-titlebar">
+        <span>DSVs fetaste Examensfest</span>
+        <div class="xp-controls">
+          <span>_</span><span>□</span><span>✕</span>
+        </div>
+      </div>
+      <div class="xp-content">
+        <p>
+          Dessa 3 svåra år är äntligen över och du tar snart examen vilket
+          måstes firas!!
+        </p>
+        <p>
+          Jag vill att du, JA JUST DU, ska komma på DSVs fetaste
+          Examensfest&copy;
+        </p>
+        <p>DATUM: onsdag den 10 Juni</p>
+        <p>TID: från 15:00 &rarr; sent</p>
+        <p>Klädkod: kom fint klädda idk ¯\_(ツ)_/¯</p>
+      </div>
     </div>
 
-    <br />
+    <div class="xp-window">
+      <div class="xp-titlebar">
+        <span>Gästlista.exe</span>
+        <div class="xp-controls">
+          <span>_</span><span>□</span><span>✕</span>
+        </div>
+      </div>
+      <div class="xp-content">
+        <h2>Lista på alla finfina personer som ska komma</h2>
+        <ul>
+          <li>Maximilian Ellnestam</li>
+        </ul>
+      </div>
+    </div>
 
-    <button onclick="sendResponse()">Skicka anmälan</button>
+    <div class="xp-window">
+      <div class="xp-titlebar">
+        <span>Intresseanmälan.exe</span>
+        <div class="xp-controls">
+          <span>_</span><span>□</span><span>✕</span>
+        </div>
+      </div>
+      <div class="xp-content">
+        <h2>Intresseanmälan</h2>
+
+        <br />
+
+        <label for="name">Namn:</label>
+        <input type="text" id="name" placeholder="Förnamn Efternamn" />
+
+        <br />
+
+        <label for="canCome">Kan du komma?</label>
+        <input type="checkbox" id="canCome" />
+
+        <br />
+
+        <label for="wantAlcohol">Vill du ha alkohol?</label>
+        <input type="checkbox" id="wantAlcohol" />
+
+        <br />
+
+        <label for="allergies">Allergier/saker jag bör känna till:</label>
+        <textarea
+          id="allergies"
+          rows="1"
+          cols="40"
+          placeholder="Lämna tomt om du inte har något"
+        ></textarea>
+
+        <br />
+
+        <label for="tempB">Hur taggad är du på det här:</label><br />
+        <div class="range-wrap">
+          <input type="range" id="tempB" name="temp" list="values" />
+          <datalist id="values">
+            <option value="0" label="inte alls :("></option>
+            <option value="25" label="knappt"></option>
+            <option value="50" label="helt ok"></option>
+            <option value="75" label="det ska bli kul"></option>
+            <option value="100" label="WOOOOH!!"></option>
+          </datalist>
+        </div>
+
+        <br />
+
+        <button onclick="sendResponse()">Skicka anmälan</button>
+      </div>
+    </div>
   </body>
   <script src="assets/js/main.js"></script>
 </html>

@@ -193,3 +193,94 @@ br {
   display: block;
   margin: 8px 0;
 }
+
+.xp-window {
+  display: inline-block;
+  width: 90%;
+  max-width: 600px;
+  border: 2px solid #003fa3;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow:
+    3px 3px 0 #000000,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  margin: 20px auto;
+  text-align: left;
+  overflow: hidden;
+}
+
+.xp-titlebar {
+  background: linear-gradient(
+    180deg,
+    #1e84d8 0%,
+    #1455b3 50%,
+    #0d3d99 51%,
+    #1455b3 100%
+  );
+  color: #ffffff;
+  font-family: "Tahoma", sans-serif;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 1px 1px 1px #000033;
+  user-select: none;
+}
+
+.xp-controls {
+  display: flex;
+  gap: 3px;
+}
+
+.xp-controls span {
+  background: linear-gradient(180deg, #5aafff, #1a6fe8);
+  border: 1px solid #003fa3;
+  border-radius: 3px;
+  width: 18px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.xp-controls span:last-child {
+  background: linear-gradient(180deg, #e87070, #c0392b);
+}
+
+.xp-controls span:hover {
+  filter: brightness(1.2);
+}
+
+.xp-content {
+  background: rgba(220, 235, 255, 0.88);
+  padding: 16px 20px;
+  color: #000033;
+  text-shadow: none;
+}
+
+.xp-content h1,
+.xp-content h2 {
+  text-shadow: none;
+  color: #00008b;
+}
+
+.xp-content p,
+.xp-content label,
+.xp-content li {
+  color: #000033;
+  text-shadow: none;
+}
+
+.xp-content ul li::before {
+  color: #1a6fe8;
+}
+
+.xp-content datalist option {
+  color: #000033;
+  text-shadow: none;
+}
