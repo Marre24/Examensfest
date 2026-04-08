@@ -34,7 +34,26 @@ Mvh, ${name}`;
     "&body=" +
     encodeURIComponent(body);
 
+  const funometerValue = Number(document.getElementById("funometer").value);
+
+  if (funometerValue < 100) {
+    showModal(
+      "Du verkar inte så taggad på det här, ändra på din inställning innan du anmäler dig!",
+    );
+    return;
+  }
+
   window.location.href = link;
+}
+
+function showModal(message) {
+  document.getElementById("xp-modal-message").textContent = message;
+  const modal = document.getElementById("xp-modal");
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("xp-modal").style.display = "none";
 }
 
 const checkbox = document.getElementById("wantAlcohol");

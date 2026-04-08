@@ -107,21 +107,49 @@
 
         <br />
 
-        <label for="tempB">Hur taggad är du på det här:</label><br />
+        <label for="funometer">Hur taggad är du på det här:</label><br />
         <div class="range-wrap">
-          <input type="range" id="tempB" name="temp" list="values" />
+          <input type="range" id="funometer" name="fun" list="values" />
           <datalist id="values">
             <option value="0" label="inte alls :("></option>
             <option value="25" label="knappt"></option>
             <option value="50" label="helt ok"></option>
             <option value="75" label="det ska bli kul"></option>
-            <option value="100" label="WOOOOH!!"></option>
+            <option value="100" label="WOOOAAAAAAH!!"></option>
           </datalist>
         </div>
 
         <br />
 
         <button onclick="sendResponse()">Skicka anmälan</button>
+      </div>
+    </div>
+    <div
+      id="xp-modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div class="xp-window" style="max-width: 380px; margin: 0">
+        <div class="xp-titlebar">
+          <span>⚠️ Varning</span>
+          <div class="xp-controls">
+            <span onclick="closeModal()">✕</span>
+          </div>
+        </div>
+        <div class="xp-content" style="text-align: center">
+          <p id="xp-modal-message"></p>
+          <button onclick="closeModal()">OK</button>
+        </div>
       </div>
     </div>
   </body>
