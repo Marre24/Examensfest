@@ -1,16 +1,195 @@
-datalist {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  writing-mode: vertical-lr;
-  width: 200px;
+body {
+  background-image: url("../../assets/img/windowsWallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  text-shadow: 1px 1px 2px #000000;
 }
 
-option {
+marquee {
+  background: linear-gradient(90deg, #003fa3, #1a6fe8, #003fa3);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px 0;
+  border-top: 2px solid #7ab4f5;
+  border-bottom: 2px solid #7ab4f5;
+  text-shadow: none;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  text-shadow:
+    2px 2px 0 #003fa3,
+    -1px -1px 0 #003fa3,
+    4px 4px 8px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  border: 3px solid #7ab4f5;
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(60, 130, 220, 0.85) 0%,
+    rgba(20, 80, 180, 0.92) 100%
+  );
+  border-radius: 8px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  font-size: 1.6em;
+  color: #ffff00;
+  text-shadow:
+    1px 1px 3px #000,
+    0 0 8px #ff8800;
+  border-bottom: 2px solid #ffff00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+ul {
+  list-style: none;
   padding: 0;
 }
 
+ul li::before {
+  content: "★ ";
+  color: #ffdd00;
+}
+
+ul li {
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+label {
+  font-weight: bold;
+  color: #ffff88;
+  font-size: 1em;
+  text-shadow: 1px 1px 2px #000;
+}
+
+input[type="text"],
+textarea {
+  background: linear-gradient(180deg, #d4e8ff 0%, #eef5ff 100%);
+  color: #000066;
+  border: 2px inset #7ab4f5;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1em;
+  padding: 6px 8px;
+  outline: none;
+  display: block;
+  margin: 6px auto;
+  border-radius: 3px;
+  text-shadow: none;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 100, 0.2);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #ff8800;
+  background: linear-gradient(180deg, #fffbe6 0%, #ffffff 100%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1a6fe8;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.range-wrap {
+  display: inline-block;
+  text-align: left;
+}
+
 input[type="range"] {
-  width: 200px;
-  margin: 0;
+  accent-color: #1a6fe8;
+  width: 300px;
+  display: block;
+  margin: 4px 0 0 0;
+}
+
+datalist {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 0;
+  margin: 2px 0 0 0;
+}
+
+datalist option {
+  font-size: 0.65em;
+  color: #ffff88;
+  text-align: center;
+  writing-mode: horizontal-tb;
+  flex: 1;
+  text-shadow: 1px 1px 2px #000;
+}
+
+button {
+  background: linear-gradient(
+    180deg,
+    #5aafff 0%,
+    #1a6fe8 45%,
+    #0d4db5 50%,
+    #1a6fe8 100%
+  );
+  color: #ffffff;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 28px;
+  border: 2px solid #003fa3;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 3px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 2px #003fa3;
+}
+
+button:hover {
+  background: linear-gradient(
+    180deg,
+    #7ac4ff 0%,
+    #2e88f5 45%,
+    #1a5fd4 50%,
+    #2e88f5 100%
+  );
+}
+
+button:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: translateY(1px);
+}
+
+br {
+  display: block;
+  margin: 8px 0;
 }
