@@ -182,7 +182,7 @@ br {
 }
 
 .xp-window {
-  display: inline-block;
+  display: block;
   width: 90%;
   max-width: 600px;
   border: 2px solid #003fa3;
