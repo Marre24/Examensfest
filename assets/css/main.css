@@ -258,6 +258,17 @@ br {
   font-size: 1em;
 }
 
+.xp-content-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.xp-content-layout img {
+  width: 200px;
+  flex-shrink: 0;
+}
+
 .info-circle {
   display: inline-flex;
   align-items: center;
