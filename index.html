@@ -11,7 +11,68 @@
   </head>
 
   <body>
-    <p>Hello, World!</p>
+    <p class="carousel">Hej!</p>
+    <h1>DSVs fetaste Examensfest</h1>
+    <p>
+      Dessa 3 svåra år är äntligen över och du tar snart examen vilket måstes
+      firas!!
+    </p>
+    <p>
+      Jag vill att du, JA JUST DU, ska komma på DSVs fetaste Examensfest&copy;
+    </p>
+
+    <p>DATUM: onsdag den 10 Juni</p>
+    <p>TID: från 15:00 &rarr; sent</p>
+
+    <h2>Lista på alla finfina personer som ska komma</h2>
+    <ul>
+      <li>Maximilian Ellnestam</li>
+    </ul>
+
+    <h2>Intresseanmälan</h2>
+
+    <label for="name">Namn:</label>
+    <input type="text" id="name" placeholder="Förnamn Efternamn" />
+
+    <br />
+
+    <label for="canCome">Kan du komma?</label>
+    <input type="checkbox" id="canCome" />
+
+    <br />
+
+    <label for="wantAlcohol">Vill du ha alkohol?</label>
+    <input type="checkbox" id="wantAlcohol" />
+
+    <br />
+
+    <label for="allergies">Allergier/saker jag bör känna till:</label>
+    <textarea
+      id="allergies"
+      rows="1"
+      cols="40"
+      placeholder="Lämna tomt om du inte har något"
+    ></textarea>
+
+    <br />
+
+    <label for="tempB">Hur taggad är du på det här:</label><br />
+    <input type="range" id="tempB" name="temp" list="values" />
+
+    <datalist id="values">
+      <option value="0" label="inte alls :("></option>
+      <option value="25" label="knappt"></option>
+      <option value="50" label="helt ok"></option>
+      <option value="75" label="det ska bli kul"></option>
+      <option
+        value="100"
+        label="WOOOOHOOOOO FYFAN VA ROLIGT DET SKA BLI!!"
+      ></option>
+    </datalist>
+
+    <br />
+
+    <button onclick="sendResponse()">Skicka anmälan</button>
   </body>
   <script src="assets/js/main.js"></script>
 </html>
