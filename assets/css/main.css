@@ -272,7 +272,7 @@ br {
 }
 
 .xp-window-row {
-  display: none;
+  display: flex;
   gap: 12px;
   justify-content: center;
   align-items: flex-start;
@@ -281,21 +281,21 @@ br {
   margin: 0 auto;
 }
 
-.xp-window-row .xp-window:first-child {
-  flex: 1;
-}
-
 .xp-window-counter {
+  display: none;
   width: 220px;
   flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
-  .xp-window-row {
-    display: flex;
+  .xp-window-counter {
+    display: block;
   }
 }
 
+.xp-window-row .xp-window:first-child {
+  flex: 1;
+}
 .digit-col {
   display: inline-block;
   overflow: hidden;
