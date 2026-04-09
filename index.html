@@ -46,17 +46,38 @@
       </div>
     </div>
 
-    <div class="xp-window">
-      <div class="xp-titlebar">
-        <span>Gästlista.exe</span>
-        <div class="xp-controls">
-          <span>_</span><span>□</span><span>✕</span>
+    <div class="xp-window-row">
+      <div class="xp-window">
+        <div class="xp-titlebar">
+          <span>Gästlista.exe</span>
+          <div class="xp-controls">
+            <span>_</span><span>□</span><span>✕</span>
+          </div>
+        </div>
+        <div class="xp-content">
+          <ul>
+            <li>Maximilian Ellnestam</li>
+          </ul>
         </div>
       </div>
-      <div class="xp-content">
-        <ul>
-          <li>Maximilian Ellnestam</li>
-        </ul>
+
+      <div class="xp-window xp-window-counter">
+        <div class="xp-titlebar">
+          <span>GästCounter.exe</span>
+          <div class="xp-controls">
+            <span>_</span><span>□</span><span>✕</span>
+          </div>
+        </div>
+        <div class="xp-content" style="text-align: center; padding: 20px 16px">
+          <p style="margin: 0 0 12px 0; font-size: 0.9em">Förväntade gäster</p>
+          <div id="guest-count" style="display: inline-flex; gap: 2px"></div>
+          <p
+            id="guest-trend"
+            style="font-size: 0.8em; margin-top: 10px; color: #1a6fe8"
+          >
+            ↑ och det ökar!
+          </p>
+        </div>
       </div>
     </div>
 

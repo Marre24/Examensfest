@@ -86,3 +86,64 @@ document.getElementById("name").addEventListener("input", function () {
     preview.textContent = name;
   }
 });
+
+let guestCount = 247;
+
+function buildDigitCol() {
+  const col = document.createElement("div");
+  col.className = "digit-col";
+  // Stack all 10 digits vertically
+  for (let i = 0; i <= 9; i++) {
+    const span = document.createElement("div");
+    span.className = "digit-inner";
+    span.textContent = i;
+    span.style.top = `${i * 1.4}em`;
+    col.appendChild(span);
+  }
+  col.dataset.current = 0;
+  showDigit(col, 0, false);
+  return col;
+}
+
+function showDigit(col, digit, animate) {
+  if (!animate) col.style.setProperty("--no-transition", "none");
+  const digits = col.querySelectorAll(".digit-inner");
+  digits.forEach((d) => {
+    d.style.transition = animate
+      ? "transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1)"
+      : "none";
+    d.style.transform = `translateY(${-digit * 1.4}em)`;
+  });
+  col.dataset.current = digit;
+}
+
+function setDigits(num) {
+  const container = document.getElementById("guest-count");
+  const digits = String(num).split("").map(Number);
+
+  while (container.children.length < digits.length) {
+    container.appendChild(buildDigitCol());
+  }
+  while (container.children.length > digits.length) {
+    container.removeChild(container.firstChild);
+  }
+
+  digits.forEach((d, i) => {
+    showDigit(container.children[i], d, true);
+  });
+}
+
+setDigits(guestCount);
+
+setInterval(() => {
+  const change = Math.floor(Math.random() * 12) - 3;
+  guestCount = Math.max(1, guestCount + change);
+  setDigits(guestCount);
+
+  setTimeout(() => {
+    const trend = document.getElementById("guest-trend");
+    trend.textContent =
+      change >= 0 ? "↑ och det ökar!" : "↓ folk ångrar sig...";
+    trend.style.color = change >= 0 ? "#1a6fe8" : "#c0392b";
+  }, 450);
+}, 2500);

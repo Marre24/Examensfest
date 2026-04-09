@@ -271,6 +271,51 @@ br {
   flex-shrink: 0;
 }
 
+.xp-window-row {
+  display: none;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.xp-window-row .xp-window:first-child {
+  flex: 1;
+}
+
+.xp-window-counter {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .xp-window-row {
+    display: flex;
+  }
+}
+
+.digit-col {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.4em;
+  font-size: 2.4em;
+  font-weight: bold;
+  color: #003fa3;
+  font-family: "Tahoma", monospace;
+  position: relative;
+  width: 0.65em;
+}
+
+.digit-inner {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4em;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 .info-circle {
   display: inline-flex;
   align-items: center;
