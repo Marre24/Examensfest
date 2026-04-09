@@ -66,3 +66,23 @@ checkbox.addEventListener("click", function handleClick() {
     targetElement.style.display = "none";
   }
 });
+
+document.getElementById("name").addEventListener("input", function () {
+  const name = this.value.trim();
+  const list = document.querySelector(".xp-content ul");
+  const preview = document.getElementById("guest-preview");
+
+  if (name === "") {
+    if (preview) preview.remove();
+    return;
+  }
+
+  if (!preview) {
+    const li = document.createElement("li");
+    li.id = "guest-preview";
+    li.textContent = name;
+    list.appendChild(li);
+  } else {
+    preview.textContent = name;
+  }
+});
