@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Comic Sans";
+  src: url("../../assets/fonts/Comic\ Sans\ MS.ttf") format("truetype");
+}
+
+:root {
+  --normal-comic-sans: "Comic Sans";
+}
+
 body {
   background-image: url("../../assets/img/windowsWallpaper.jpg");
   background-size: cover;
@@ -5,7 +14,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: #ffffff;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: var(--normal-comic-sans);
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -77,7 +86,7 @@ textarea {
   background: linear-gradient(180deg, #d4e8ff 0%, #eef5ff 100%);
   color: #000066;
   border: 2px inset #7ab4f5;
-  font-family: "Comic Sans MS", cursive;
+  font-family: var(--normal-comic-sans);
   font-size: 1em;
   padding: 6px 8px;
   outline: none;
@@ -147,7 +156,7 @@ button {
     #1a6fe8 100%
   );
   color: #ffffff;
-  font-family: "Comic Sans MS", cursive;
+  font-family: var(--normal-comic-sans);
   font-weight: bold;
   font-size: 1.1em;
   padding: 8px 28px;
@@ -197,6 +206,11 @@ br {
   overflow: visible;
 }
 
+.xp-window-row .xp-window {
+  margin: 0;
+  width: auto;
+}
+
 .xp-titlebar {
   background: linear-gradient(
     180deg,
@@ -206,7 +220,7 @@ br {
     #1455b3 100%
   );
   color: #ffffff;
-  font-family: "Tahoma", sans-serif;
+  font-family: var(--normal-comic-sans);
   font-size: 1em;
   font-weight: bold;
   padding: 6px 8px;
@@ -303,7 +317,7 @@ br {
   font-size: 2.4em;
   font-weight: bold;
   color: #003fa3;
-  font-family: "Tahoma", monospace;
+  font-family: var(--normal-comic-sans);
   position: relative;
   width: 0.65em;
 }
@@ -344,7 +358,7 @@ br {
   transform: translateX(-50%);
   background: #000033;
   color: #ffffff;
-  font-family: "Tahoma", sans-serif;
+  font-family: var(--normal-comic-sans);
   font-size: 1em;
   font-weight: normal;
   padding: 6px 10px;
