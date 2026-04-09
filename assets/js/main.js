@@ -147,3 +147,92 @@ setInterval(() => {
     trend.style.color = change >= 0 ? "#1a6fe8" : "#c0392b";
   }, 450);
 }, 2500);
+const funometerInput = document.getElementById("funometer");
+let ballInterval = null;
+
+funometerInput.addEventListener("input", function () {
+  if (Number(this.value) === 100) {
+    destroyFunometer();
+  }
+});
+
+function getFunometerThumbPosition() {
+  const rect = funometerInput.getBoundingClientRect();
+  return {
+    x: rect.right - 20,
+    y: rect.top + rect.height / 2 - 20,
+  };
+}
+
+function preventChange() {
+  funometerInput.value = 100;
+}
+
+function destroyFunometer() {
+  const pos = getFunometerThumbPosition();
+
+  const wrap = document.querySelector(".range-wrap");
+  let shakes = 0;
+  const shakeInterval = setInterval(() => {
+    wrap.style.transform = `translateX(${(Math.random() - 0.5) * 10}px)`;
+    shakes++;
+    if (shakes > 10) {
+      clearInterval(shakeInterval);
+      wrap.style.transform = "none";
+    }
+  }, 40);
+
+  funometerInput.style.accentColor = "#c0392b";
+  funometerInput.addEventListener("input", preventChange);
+
+  const ball = document.getElementById("funometer-ball");
+  ball.style.left = pos.x + "px";
+  ball.style.top = pos.y + "px";
+  ball.style.display = "block";
+
+  let x = pos.x;
+  let y = pos.y;
+  let dx = 3;
+  let dy = -3;
+  const size = 18;
+  let dvdMode = false;
+
+  setTimeout(() => {
+    ball.style.width = "80px";
+    ball.style.height = "40px";
+    ball.style.borderRadius = "0";
+    ball.style.background = "none";
+    ball.style.border = "none";
+    ball.style.boxShadow = "none";
+    ball.innerHTML = `<img src="assets/img/Dvd-Logo.png" style="width:100%; height:100%; object-fit:contain;" />`;
+    dvdMode = true;
+  }, 3000);
+
+  ballInterval = setInterval(() => {
+    const w = dvdMode ? 80 : size;
+    const h = dvdMode ? 40 : size;
+
+    x += dx;
+    y += dy;
+
+    if (x <= 0) {
+      x = 0;
+      dx *= -1;
+    }
+    if (x >= window.innerWidth - w) {
+      x = window.innerWidth - w;
+      dx *= -1;
+    }
+    if (y <= 0) {
+      y = 0;
+      dy *= -1;
+    }
+    if (y >= window.innerHeight - h) {
+      y = window.innerHeight - h;
+      dy *= -1;
+    }
+
+    ball.style.left = x + "px";
+    ball.style.top = y + "px";
+  }, 16);
+}

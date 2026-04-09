@@ -376,3 +376,16 @@ br {
 .info-circle:hover .info-tooltip {
   display: block;
 }
+
+.funometer-ball {
+  display: none;
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #5aafff, #1a6fe8);
+  border: 2px solid #003fa3;
+  box-shadow: 0 0 6px rgba(26, 111, 232, 0.8);
+  z-index: 999;
+  pointer-events: none;
+}
