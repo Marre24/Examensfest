@@ -182,6 +182,7 @@ function destroyFunometer() {
 
   funometerInput.style.accentColor = "#c0392b";
   funometerInput.addEventListener("input", preventChange);
+  funometerInput.classList.add("funometer-destroyed");
 
   const ball = document.getElementById("funometer-ball");
   ball.style.left = pos.x + "px";

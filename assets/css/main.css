@@ -405,3 +405,16 @@ br {
   z-index: 999;
   pointer-events: none;
 }
+
+.funometer-destroyed::-webkit-slider-thumb {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+.funometer-destroyed::-moz-range-thumb {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  border: none !important;
+}
