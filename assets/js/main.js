@@ -4,7 +4,6 @@ function sendResponse() {
   const name = document.getElementById("name").value.trim();
   const canCome = document.getElementById("canCome").checked;
   const wantAlcohol = document.getElementById("wantAlcohol").checked;
-  const allergies = document.getElementById("allergies").value.trim();
   const preferences = targetElement.value.trim();
 
   var body = `Hejsan Maxi,
@@ -22,7 +21,6 @@ ${
       : `Mina önskemål gällande alkohol är: ${preferences}`
     : "Du behöver inte köpa alkohol till mig."
 }
-${allergies == "" ? "" : `Här är mina allergier/saker du bör känna till: ${allergies}`}
 
 Mvh, ${name}`;
 
