@@ -184,14 +184,14 @@ function destroyFunometer() {
 
   let x = pos.x;
   let y = pos.y;
-  let dx = 3;
-  let dy = -3;
+  let dx = (Math.random() < 0.5 ? 1 : -1) * (2 + Math.random() * 2);
+  let dy = (Math.random() < 0.5 ? 1 : -1) * (2 + Math.random() * 2);
   const size = 18;
   let dvdMode = false;
 
   setTimeout(() => {
-    ball.style.width = "80px";
-    ball.style.height = "40px";
+    ball.style.width = "100px";
+    ball.style.height = "45px";
     ball.style.borderRadius = "0";
     ball.style.background = "none";
     ball.style.border = "none";
@@ -201,8 +201,9 @@ function destroyFunometer() {
   }, 3000);
 
   ballInterval = setInterval(() => {
-    const w = dvdMode ? 80 : size;
-    const h = dvdMode ? 40 : size;
+    const rect = ball.getBoundingClientRect();
+    const w = rect.width || size;
+    const h = rect.height || size;
 
     x += dx;
     y += dy;
