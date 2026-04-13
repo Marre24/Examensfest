@@ -7,9 +7,9 @@ function sendResponse() {
 
   const amountToPay =
     30 +
-    (wantBubbel ? 35 : 0) +
-    (wantAlkFriBubbel ? 20 : 0) +
-    (wantBål ? 60 : 0);
+    (wantBubbel ? 40 : 0) +
+    (wantAlkFriBubbel ? 30 : 0) +
+    (wantBål ? 100 : 0);
 
   var body = `Hejsan Maxi,
 
