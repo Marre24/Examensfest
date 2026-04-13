@@ -5,6 +5,12 @@ function sendResponse() {
   const wantAlkFriBubbel = document.getElementById("wantAlkFriBubbel").checked;
   const wantBål = document.getElementById("wantBål").checked;
 
+  const amountToPay =
+    30 +
+    (wantBubbel ? 35 : 0) +
+    (wantAlkFriBubbel ? 20 : 0) +
+    (wantBål ? 60 : 0);
+
   var body = `Hejsan Maxi,
 
 ${
@@ -25,6 +31,8 @@ ${
       ? "OOoooooo bål låter skitnajs, fixa lite till mig också. "
       : "Det här med bål är inte för mig. "
   }
+
+För att färdigställa anmälan swisha ${amountToPay}kr varav 30kr snacks/inträde till 073-155 55 34 (Pengarna swishas tillbaka ifall du inte kommer).
 
 Mvh, ${name}`;
 
