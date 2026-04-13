@@ -32,7 +32,7 @@ ${
       : "Det här med bål är inte för mig. "
   }
 
-För att färdigställa anmälan swisha ${amountToPay}kr varav 30kr snacks/inträde till 073-155 55 34 (Pengarna swishas tillbaka ifall du inte kommer).
+För att färdigställa anmälan swisha ${amountToPay}kr till 073-155 55 34 (Pengarna swishas tillbaka ifall du inte kommer).
 
 Mvh, ${name}`;
 
@@ -55,6 +55,28 @@ Mvh, ${name}`;
 
   window.location.href = link;
 }
+
+function updateKvitto() {
+  const canCome = document.getElementById("canCome").checked;
+  const wantBubbel = document.getElementById("wantBubbel").checked;
+  const wantAlkFriBubbel = document.getElementById("wantAlkFriBubbel").checked;
+  const wantBål = document.getElementById("wantBål").checked;
+
+  const amountToPay =
+    (canCome ? 30 : 0) +
+    (wantBubbel ? 40 : 0) +
+    (wantAlkFriBubbel ? 30 : 0) +
+    (wantBål ? 100 : 0);
+
+  document.getElementById("kvitto").textContent = `Summa: ${amountToPay}kr`;
+}
+
+document.getElementById("wantBubbel").addEventListener("change", updateKvitto);
+document.getElementById("canCome").addEventListener("change", updateKvitto);
+document
+  .getElementById("wantAlkFriBubbel")
+  .addEventListener("change", updateKvitto);
+document.getElementById("wantBål").addEventListener("change", updateKvitto);
 
 function showModal(message) {
   document.getElementById("xp-modal-message").textContent = message;
