@@ -76,6 +76,23 @@ p {
   line-height: 1.8;
 }
 
+.highlight-info {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.8;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 111, 232, 0.18) 0%,
+    rgba(26, 111, 232, 0.06) 100%
+  );
+  border-left: 4px solid #1a6fe8;
+  border-radius: 4px;
+  padding: 4px 10px;
+  color: #00235e;
+  text-shadow: none;
+  margin: 6px 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
