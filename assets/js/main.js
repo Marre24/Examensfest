@@ -108,7 +108,7 @@ document.getElementById("name").addEventListener("input", function () {
   }
 });
 
-let guestCount = 247;
+let guestCount = 1337;
 
 function buildDigitCol() {
   const col = document.createElement("div");
